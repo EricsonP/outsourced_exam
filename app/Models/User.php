@@ -41,4 +41,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function library()
+    {
+        return $this->belongsTo('App\Models\Library', 'libray_id', 'id');
+    }
 }
